@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Model</title>
+    <style>
+        .box1{
+            box-sizing: content-box;
+            width: 300px;
+            height: 150px;
+            margin: 25px;
+            padding: 25px;
+            border: 5px solid black;
+            background-color: aqua;
+        }
+         .box2{
+            box-sizing: border-box;
+            width: 300px;
+            height: 150px;
+            margin: 25px;
+            padding: 25px;
+            border: 5px solid black;
+            background-color: rgb(37, 134, 141);
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            margin: -20px;
+            padding: 10px;
+            border: 2px solid rgb(163, 30, 30);
+            background-color: rgb(31, 52, 172);
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            margin: 15px;
+            padding: 2px;
+            border: 1px dashed rgb(1, 1, 19);
+            background-color: rgb(158, 217, 235);
+        }
+        .box5{
+            width: 120px;
+            height: 200px;
+            margin-bottom: 25px;
+            padding: 28px;
+            border: 5px dashed rgb(187, 82, 21);
+            background-color: rgb(35, 150, 185);
+        }
+        .box6{
+            width: 130px;
+            height: 120px;
+            margin-top: 25px;
+            padding: 30px;
+            border: 10px solid rgb(51, 5, 5);
+            background-color: rgba(138, 240, 177, 0.603);
+        }
+        .box7{
+            width: 160px;
+            height: 160px;
+            margin: 30px;
+            padding: 10px;
+            border: 10px dashed rgb(126, 61, 61);
+            background-color: rgb(130, 64, 206);
+        }
+        .box8{
+            width: 150px;
+            height: 180px;
+            margin: 30px;
+            padding: 30px;
+            border: 25px solid rgb(6, 209, 216);
+            background-color: rgb(95, 100, 124);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>CSS Box-Model</h1>
+        <h2>Box-sizing:</h2>
+        <div class="box1">This is div 1</div>
+        <div class="box2">This is div 2</div>
+        <h2>Negative Margins:</h2>
+        <div class="box3">This is div 3</div>
+        <div class="box4">This is div 4</div>
+        <h2>Margin collapsing:</h2>
+        <div class="box5">This is div 5</div>
+        <div class="box6">This is div 6</div>
+        <div class="box7">This is div 7</div>
+        <div class="box8">This is div 8</div>
+    </main>
+</body>
+</html>
