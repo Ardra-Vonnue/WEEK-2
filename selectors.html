@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+    <style>
+      li:nth-child(2) {
+        background-color: pink;
+      }
+      li:first-child{
+        border: 2px solid olivedrab;
+      }
+      li:last-child{
+        border: 2px solid rebeccapurple
+      }
+      li:nth-child(3n+1){
+        border: 2px solid aqua;
+
+      }
+      .mailId {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 200px;
+      }
+      .card,
+      .featured {
+        font-family:
+          "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-style: italic;
+        font-size: small;
+      }
+      [href^=https]{
+        color: yellowgreen;
+      }
+      article > p:first-of-type {
+        font-style: italic;
+      }
+      h2 + p {
+        color: brown;
+      }
+      .button:hover {
+        background-color: aqua;
+      }
+      [type="email"]:focus {
+        background-color: aquamarine;
+        color: blue;
+      }
+      p.read::before {
+        content : "->Read This :";
+        color: darkblue;
+        font-style: italic;
+      }
+      p.featured::after {
+        content: "-> You can dive more about ID selectors";
+        font-style: italic;
+        color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="wholeList">
+        <ul class="list1">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+          <li>Item 5</li>
+          <li>Item 6</li>
+          <li>Item 7</li>
+          <li>Item 8</li>
+        </ul>
+        <ul class="list2">
+            <li>Item 9</li>
+          <li>Item 10</li>
+          <li>Item 11</li>
+          <li>Item 12</li>
+        </ul>
+      </div>
+       <br>
+        <br>
+        <a href="https://github.com/Ardra-Vonnue/WEEK-1">WEEk-1</a>
+        <br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/">Selectors</a>
+        <br>
+        <a href="#Pseudo">Go to Pseudo classes</a>
+        <br>
+        <br>
+      <article>
+        <h1>CSS selectors</h1>
+        <p>
+          The CSS selectors module defines the patterns to selectelements to
+          which a set of css rules are then applied along with their
+          specificity.The CSS selectors module provudes us with more than 60
+          selectors and five combinators.
+        </p>
+        <p id="Pseudo" class="read">
+          In CSS , selectors are patterns used to match,or select the elements
+          you want to style.Selectors are also used in Javascript to enable
+          selectind the DOM nodes to return as a NodeList.
+        </p>
+        <p>
+          Selectors whether used in CSS or JavaScript, enable targeting HTML
+          elements based on their type,attributes,current states and even
+          postion in the DOM.
+        </p>
+        <h2>CSS-Pseudo Classes</h2>
+        <p>
+          A pseudo class consist of a colon followed by the pseudo-class name.A
+          functional pseudo-class also contains a pair of parantheses to define
+          the arguments
+        </p>
+        <p class="card">
+          Pseudo class let you apply a style to an element not only in relation
+          to the content of document tree , but also in relation to external
+          factors like the history of navigator
+        </p>
+        <p class="featured">
+          The CSS ID selector matches an element based on the value of the
+          element's id attribute.In order for the element to be selected,it's id
+          attribute must match exactly the value given in the selector.
+        </p>
+       
+        <br>
+
+      </article>
+      <div class="mailId">
+        <label for="mailOne">Enter your Mail:</label>
+        <input type="email" id="mailOne" class="mail" />
+        <br />
+        <br />
+        <label for="mailTwo">Enter your Alternate Mail:</label>
+        <input type="email" id="mailTwo" />
+        <br />
+        <br />
+       
+      </div>
+      <div>
+         <input type="submit" class="button" />
+      </div>
+    </main>
+  </body>
+</html>
