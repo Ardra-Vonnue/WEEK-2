@@ -1,0 +1,63 @@
+body{
+    background-image: URL(https://picsum.photos/id/42/1000/1000?grayscale);
+    height: 1000px;
+    width: 1000px;
+    background-repeat: no-repeat;
+    background-attachment:fixed ;
+
+}
+*{
+    margin:0;
+    padding:0;
+}
+.row{
+    display: flex;
+}
+
+#navbar{
+    border: 1px solid rgb(87, 50, 52);
+   
+    background-color: rgb(126, 160, 189);
+}
+#navbar a{
+    padding: 10px;
+}
+.column-left{
+    
+    width: 23.333%;
+}
+.column-center{
+   
+    width: 33.333%;
+}
+.column-right{
+    
+    width: 33.333%;
+}
+footer{
+    text-align: center;
+}
+#news1{
+    color: rgb(70, 2, 2);
+}
+#news2{
+    color: rgb(82, 7, 26);
+}
+#news3{
+    color: rgb(53, 4, 4);
+}
+#pseudo1:hover{
+    color: rgb(192, 192, 31);
+}
+#pseudo2:hover{
+    color: rgb(192, 192, 49);
+}
+#pseudo3:hover{
+    color: rgb(202, 202, 41);
+}
+#pseudo4:hover{
+    color: rgb(194, 194, 18);
+}
+#pseudo5:hover{
+    color: rgb(180, 180, 21);
+}
