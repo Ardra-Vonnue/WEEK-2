@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card</title>
+    <style>
+      .image1 {
+        width: 200px;
+        height: 200px;
+        padding-top: 10px;
+      }
+      .image2 {
+        width: 160px;
+        height: 200px;
+      }
+      .image3{
+        width: 150px;
+        height:200px;
+      }
+      .card1 {
+        border: 2px solid black;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .card2 {
+        border: 2px solid black;
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+      }
+      .card3{
+        border: 2px solid black;
+        width: 300px;
+        display: flex;
+        flex: 1 1 calc(30%)
+        
+      }
+      .flex1{
+        display: flex;
+        flex-wrap: wrap;
+        
+      }
+      .container2 {
+        flex-direction: column;
+        margin-top: auto;
+      }
+      .container3 {
+        padding: 10px;
+      }
+      @media screen and (width<600px) {
+        .card2 {
+          flex-direction: column;
+          justify-content: space-evenly;
+        }
+        .image2 {
+          padding: 20px;
+        }
+      }
+      @media screen and (width<700px) {
+        .card3 {
+          flex: 1 1 calc(45%)
+        }
+    }
+     @media screen and (width<450px) {
+        .card3 {
+          flex: 1 1 calc(95%)
+        }
+    }
+    
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="card1">
+        <img src="image4.jpeg" alt="Flower Vase" class="image1" />
+
+        <div class="container1">
+          <h3>Flower Vase</h3>
+          <p>Flower vase on sale .Buy 2 and get 20% offer</p>
+          <p>Tags: Flower vases,Flower pots</p>
+        </div>
+        <div class="container2">
+          <span>Price : 499 Rs</span>
+
+          <input type="button" value="Buy Now" />
+        </div>
+      </div>
+      <br />
+      <br />
+      <h2>Horizontal card variant</h2>
+      <div class="card2">
+        <img src="image5.jpeg" alt="Flower Vase" class="image2" />
+        <div class="container3">
+          <h3>Mountain</h3>
+          <p>Image shown here is a lake and a mountain</p>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="flex1">
+        <div class="card3">
+          <img src="https://picsum.photos/id/78/200/300" alt="Flower Vase" class="image3" />
+          <div class="container4">
+            <h3>Mountain</h3>
+            <p>Image shown here is a lake and a mountain</p>
+          </div>
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/79/200/300" alt="Flower Vase" class="image3" />
+          <div class="container4">
+            <h3>Mountain</h3>
+            <p>Image shown here is a lake and a mountain</p>
+          </div>
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/84/200/300" alt="Flower Vase" class="image3" />
+          <div class="container4">
+            <h3>Mountain</h3>
+            <p>Image shown here is a lake and a mountain</p>
+          </div>
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/91/200/300" alt="Flower Vase" class="image3" />
+          <div class="container4">
+            <h3>Mountain</h3>
+            <p>Image shown here is a lake and a mountain</p>
+          </div>
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/93/200/300" alt="Flower Vase" class="image3" />
+          <div class="container4">
+            <h3>Mountain</h3>
+            <p>Image shown here is a lake and a mountain</p>
+          </div>
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/95/200/300" alt="Flower Vase" class="image3" />
+          <div class="container4">
+            <h3>Mountain</h3>
+            <p>Image shown here is a lake and a mountain</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
