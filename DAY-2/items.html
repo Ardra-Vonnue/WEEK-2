@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Items</title>
+    <style>
+      .container {
+        display: flex;
+        border: 1px solid black;
+        width: 400px;
+        height: 100px;
+      }
+      .container1 {
+        display: flex;
+        border: 1px solid black;
+        width: 400px;
+        height: 100px;
+        align-items: center;
+      }
+
+      .box1 {
+        display: flex;
+        flex-grow: 0;
+      }
+      .box2 {
+        flex-grow: 1;
+      }
+      .box3 {
+        flex-grow: 2;
+      }
+      .box4 {
+        flex-grow: 1;
+      }
+      .box5 {
+        flex-grow: 0;
+      }
+      .box {
+        border: 2px solid black;
+      }
+      .box6 {
+        width: 100px;
+        flex-shrink: 1;
+      }
+      .box7 {
+        width: 100px;
+        flex-shrink: 0;
+      }
+      .box8 {
+        width: 100px;
+        flex-shrink: 2;
+      }
+      .box9 {
+        width: 100px;
+        flex-shrink: 1;
+      }
+      .box10 {
+        width: 100px;
+        flex-shrink: 1;
+      }
+      .box11 {
+        flex-grow: 1;
+        flex-basis: 100px;
+      }
+      .box12 {
+        flex-grow: 1;
+        flex-basis: 50px;
+      }
+      .box13 {
+        flex-shrink: 1;
+        flex-basis: 200px;
+      }
+      .box14 {
+        flex-shrink: 1;
+        flex-basis: 0;
+      }
+      .box15 {
+        flex-shrink: 1;
+        flex-basis: 250px;
+      }
+      .box16 {
+        order: 0;
+      }
+      .box17 {
+        order: 2;
+      }
+      .box18 {
+        order: 1;
+      }
+      .box19 {
+        order: 3;
+      }
+      .box20 {
+        order: -1;
+      }
+      .box21 {
+        align-self: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Flex-grow</h1>
+      <div class="container">
+        <div class="box box1">One</div>
+        <div class="box box2">Two</div>
+        <div class="box box3">Three</div>
+        <div class="box box4">Four</div>
+        <div class="box box5">Five</div>
+      </div>
+      <h1>Flex-Shrink</h1>
+      <div class="container">
+        <div class="box box6">One</div>
+        <div class="box box7">Two</div>
+        <div class="box box8">Three</div>
+        <div class="box box9">Four</div>
+        <div class="box box10">Five</div>
+      </div>
+      <h1>Flex-basis</h1>
+      <div class="container">
+        <div class="box box11">aa</div>
+        <div class="box box12">bb</div>
+        <div class="box box13">cc</div>
+        <div class="box box14">dd</div>
+        <div class="box box15">ee</div>
+      </div>
+      <h1>Order property</h1>
+      <div class="container">
+        <div class="box box16">1</div>
+        <div class="box box17">2</div>
+        <div class="box box18">3</div>
+        <div class="box box19">4</div>
+        <div class="box box20">5</div>
+      </div>
+      <h1>Align-self</h1>
+      <div class="container1">
+        <div class="box box21">aa</div>
+        <div class="box box22">bb</div>
+        <div class="box box23">cc</div>
+        <div class="box box24">dd</div>
+        <div class="box box25">ee</div>
+      </div>
+    </main>
+  </body>
+</html>
