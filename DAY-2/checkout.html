@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <style>
+      .parent1 {
+        display: flex;
+        flex-direction: column;
+      }
+      .inputs {
+        flex-direction: column;
+        display: flex;
+        flex-grow: 1;
+      }
+      .card1 label {
+        min-width: 180px;
+      }
+      .card1 input {
+        flex-grow: 1;
+      }
+      .card1 {
+        display: flex;
+        flex-grow: 1;
+        align-items: space-between;
+      }
+
+      
+      .required:user-invalid {
+        border: 3px solid red;
+      }
+      .post:user-invalid {
+        border: 3px solid red;
+      }
+
+      @media screen and (width<600px) {
+        .card1 {
+          flex-direction: column;
+        }
+        
+      }
+      .label2 {
+        flex-direction: row;
+        display: flex;
+        width: 80px;
+      }
+      .card2 {
+        display: flex;
+        flex-direction: row;
+      }
+      /* .card1 .card2 .input1 {
+        width: 300px;
+      } */
+      .card3 {
+        display: flex;
+        gap: 10px;
+      }
+      /* .card3 input {
+        width: 180px;
+      } */
+      .btn {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: flex-end;
+      }
+      .btn .btn1 {
+        background-color: rgb(59, 163, 204);
+      }
+      .btn .btn2 {
+        background-color: rgb(224, 90, 72);
+      }
+      .btn1:hover {
+        background-color: blue;
+      }
+      .required:focus {
+        background-color: aquamarine;
+      }
+      .error-msg {
+        display: none;
+        font-size: 0.875rem;
+        color: rgb(216, 42, 12);
+        margin-top: 0.25rem;
+      }
+      .required:user-invalid ~ .error-msg {
+        display: block;
+      }
+      .red {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-self: end;
+      }
+      .red input {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form>
+        <fieldset>
+          <legend>Fields marked * are required</legend>
+          <fieldset>
+            <legend>Delivery Adress</legend>
+            <div class="parent1">
+              <div class="card3">
+                <div class="card1">
+                  <label class="label2" for="fname">Enter First Name:*</label>
+                  <div class="red">
+                    <input
+                      class="required"
+                      class="input1"
+                      type="text"
+                      id="fname"
+                      required
+                    />
+                    <span class="error-msg">Enter valid details</span>
+                  </div>
+                </div>
+                <br />
+                <br />
+                <div class="card1">
+                  <label class="label2" for="lname">Enter Last name:</label>
+                  <input class="input1" type="text" id="lname" required />
+                </div>
+              </div>
+              <br />
+              <br />
+              <div class="card1">
+                <label class="label1" for="address1">Address Line 1:*</label>
+                <div class="red">
+                  <input class="required" type="text" id="address1" required />
+                  <span class="error-msg">Enter valid details</span>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div class="card1">
+                <label class="label1" for="address2">Address Line 2:*</label>
+                <div class="red">
+                  <input class="required" type="text" id="address2" required />
+                  <span class="error-msg">Enter valid details</span>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div class="card1">
+                <label class="label1" for="city">City:*</label>
+                <div class="red">
+                  <input class="required" type="text" id="city" required />
+                  <span class="error-msg">Enter valid details</span>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div class="card1">
+                <label class="label1" for="postcode">Post Code*:</label>
+                <div class="red">
+                  <input class="required" type="text" id="postcode" required />
+                  <span class="error-msg">Enter valid details</span>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div class="card1">
+                <label class="label1" for="country">Select Country:</label>
+                <select name="countries" id="country">
+                  <option value="India">India</option>
+                  <option value="Russia">Russia</option>
+                  <option value="Brazil">Brazil</option>
+                  <option value="India">India</option>
+                  <option value="Canada">Canada</option>
+                  <option value="China">China</option>
+                  <option value="Mexico">Mexico</option>
+                  <option value="Egypt">Egypt</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="Kenya">Kenya</option>
+                  <option value="France">France</option>
+                  <option value="Finland">Finland</option>
+                  <option value="Nepal">Nepal</option>
+                  <option value="Greece">Greece</option>
+                  <option value="England">England</option>
+                  <option value="Austria">Australia</option>
+                  <option value="Scotland">Scotland</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Ireland">Ireland</option>
+                  <option value="Bulgaria">Bulgaria</option>
+                  <option value="Italy">Italy</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+          <br />
+          <br />
+          <fieldset>
+            <legend>Payment Details</legend>
+            <div class="card1">
+              <label for="card">Card Number:*</label>
+              <div class="red">
+                <input
+                  class="required"
+                  type="text"
+                  id="card"
+                  maxlength="16"
+                  required
+                />
+                <span class="error-msg">Enter valid details</span>
+              </div>
+            </div>
+            <br />
+            <br />
+            <div class="card3">
+              <div class="card1">
+                <label for="country">Enter Expiry month:</label>
+
+                <select name="countries" id="country">
+                  <option value="Jan">January</option>
+                  <option value="Feb">February</option>
+                  <option value="Mar">March</option>
+                  <option value="Apr">April</option>
+                  <option value="May">May</option>
+                  <option value="June">June</option>
+                  <option value="July">July</option>
+                  <option value="Aug">August</option>
+                  <option value="Sep">September</option>
+                  <option value="Oct">October</option>
+                  <option value="Nov">November</option>
+                  <option value="Dec">December</option>
+                </select>
+              </div>
+              <br />
+              <br />
+              <div class="card1">
+                <label for="expiry2">Enter Expiry Year:</label>
+                <input type="number" id="expiry2" required placeholder="YYYY" />
+              </div>
+            </div>
+            <br />
+            <br />
+            <div class="card1">
+              <div class="red">
+                <label for="cvv">Enter CVV:*</label>
+                <input
+                  type="password"
+                  id="cvv"
+                  class="required"
+                  maxlength="4"
+                  aria-describedby="card1"
+                  required
+                />
+                <span class="error-msg">Enter valid details</span>
+              </div>
+            </div>
+            <br />
+            <br />
+            <div class="card1">
+              <label for="order">Enter order notes:</label>
+              <textarea id="order" maxlength="500" placeholder="optional">
+              </textarea>
+            </div>
+
+            <br />
+            <br />
+          </fieldset>
+          <br />
+          <div class="btn">
+            <button type="submit" value="SUBMIT" class="btn1">SUBMIT</button>
+            <button type="cancel" value="CANCEL" class="btn2">CANCEL</button>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
