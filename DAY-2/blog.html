@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blog</title>
+    <style>
+      .header {
+        background-color: aquamarine;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5px;
+        height: 60px;
+        container-type: scroll-state;
+        height: 100px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        > .header {
+          @container scroll-state(stuck:top) {
+            box-shadow: 0px 2px 2px rgb(29, 153, 224);
+          }
+        }
+      }
+
+      nav a {
+        text-decoration: none;
+        font-size: 25px;
+      }
+      .head2 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .foot {
+        display: flex;
+        justify-content: center;
+        border: 2px solid black;
+        height: 20px;
+      }
+      .parent1 {
+        display: flex;
+        flex-direction: row;
+      }
+      .aside1 {
+        width: 300px;
+      }
+      .card1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+      }
+      .image1 {
+        height: 500px;
+        width: 500px;
+      }
+      @media screen and (width<768px) {
+        .parent1 {
+          flex-direction: column;
+        }
+      }
+      .a1 {
+        border: 2px solid black;
+
+        display: flex;
+        flex-direction: row;
+      }
+      .a2 {
+        border: 2px solid black;
+
+        display: flex;
+        flex-direction: row;
+      }
+      .a3 {
+        border: 2px solid black;
+
+        display: flex;
+        flex-direction: row;
+      }
+      .aside1 {
+        width: 20%;
+      }
+      .card1 {
+        width: 80%;
+      }
+      .a1 {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+      .a1:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(228, 111, 2, 0.2);
+      }
+      .a2 {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+      .a2:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(6, 10, 245, 0.2);
+      }
+      .a3 {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+      .a3:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(41, 117, 11, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <header id="home">
+        <h1>TEDBlog</h1>
+
+        <nav class="navbar" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#blog">Blogs</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+    </div>
+
+    <main id="blog">
+      <div class="parent1">
+        <div class="aside1">
+          <aside>
+            <section>
+              <h4>Recent Posts</h4>
+
+              <a href="#article1"
+                >Recent post related to astrophysics conception</a
+              >
+              <br />
+              <br />
+              <a href="#article2">Recent post from exercise scientist</a>
+              <br />
+              <br />
+
+              <a href="#article3"
+                >Recent post about billionaires and their popularity</a
+              >
+            </section>
+
+            <section id="category">
+              <h4>Categories</h4>
+
+              <a href="#article1">Universe's Language from astrophysics </a>
+              <br />
+              <br />
+
+              <a href="#article2"
+                >idea of wrecking our health and the solutions</a
+              >
+
+              <a href="#article3">new way of wealth calculation</a>
+            </section>
+          </aside>
+        </div>
+        <div class="card1">
+          <div class="a1">
+            <article id="article1">
+              <header>
+                <h2>What does the universe speaks like?</h2>
+                <p><time datetime="2026-04-15">April 15,2026</time></p>
+              </header>
+              <section>
+                <h3>
+                  Astrophysicist Mark Whittle takes us back to its conception:
+                </h3>
+                <p>
+                  Vast sound waves rippling through the cosmos for millions of
+                  years,slowly becoming the tapestry of galexies we see
+                  today.Then he plays it for us,and for one brief stunning
+                  moment,we hear the sound of creation itself Back on
+                  earth,biologist David Haskell and sound designer<b
+                    >Matthew Mikkelsen</b
+                  >
+                  trace the primitive language of sound:from the first omsect
+                  chirp to the layered symphonies of rainforests and oceans.The
+                  universe has been singing long before we could here it.It's
+                  abput time we listened.
+                </p>
+                <img
+                  src="https://picsum.photos/id/1/200/300"
+                  alt="random image"
+                  class="image1"
+                />
+              </section>
+              <footer>
+                <span>Author Name:Brian Green</span>
+
+                <a href="#category">Astrophysics</a>
+              </footer>
+            </article>
+          </div>
+
+          <div class="a2">
+            <article id="article2">
+              <header>
+                <h2>Back to biological basics:</h2>
+                <p><time datetime="2026-04-15">April 15,2026</time></p>
+              </header>
+              <section>
+                <h3>
+                  We're living in the most sedentary era in human history,and
+                  its's quitely wrecking our health:
+                </h3>
+                <p>
+                  According to the famous exercise scientist
+                  <b>Keith Diaz</b> has a solution: a five minutes "movement
+                  break" every half our.He shows the data on why quick moments
+                  of movements can drastically boost our health,mood and
+                  energy.Phycisian Dhruv Khullar explores the potential of GLP-1
+                  drugs to move beyond weight-loss medication into a promising
+                  treatment for addiction.
+                </p>
+                <img
+                  src="https://picsum.photos/id/3/200/300"
+                  alt="random image"
+                  class="image1"
+                />
+              </section>
+              <footer>
+                <span>Author Name:Dhruv Khullar</span>
+
+                <a href="#category">Biology</a>
+              </footer>
+            </article>
+          </div>
+          <div class="a3">
+            <article id="article3">
+              <header>
+                <h2>A new way to calculate wealth:</h2>
+                <p><time datetime="2026-04-15">April 15,2026</time></p>
+              </header>
+              <section>
+                <h3>
+                  Polling in popularity below trial lawyers and just above
+                  influencers:
+                </h3>
+                <p>
+                  Yet where billionaires flourish,poverty shrinks and economy
+                  grow.<b>Randall Lane</b>,the editorial steward of Forbe's
+                  signature rankings,thinks this widespread dislike is the
+                  result of world's richest people giving away less than one
+                  percent of their net worth,To close the gap, Forbes is
+                  launching a new list - "True Net Worth" -that counts what you
+                  have given away wealth you still own,turning the ego that
+                  drives billionaires up the list into a force that might do
+                  some good
+                </p>
+                <img
+                  src="https://picsum.photos/id/1/200/300"
+                  alt="random image"
+                  class="image1"
+                />
+              </section>
+              <footer>
+                <span>Author name:Randall Lane</span>
+
+                <a href="#category">Wealth</a>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <h4 id="contact">Contact details</h4>
+      <p>
+        Phone:
+        <a href="tel:+919900990099">:+91 9900990099</a>
+        <br />
+        Email:
+        <a href="mailto:ardra.m@vonnue.com">click here</a>
+      </p>
+
+      <div class="foot">
+        <footer>
+          <span>Copyright © 2026-2028 TermsFeed®. All rights reserved.</span>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
