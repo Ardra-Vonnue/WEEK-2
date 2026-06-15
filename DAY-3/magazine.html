@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magazine</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "header header header header"
+        "nav nav nav nav"
+        "hero hero hero hero"
+        "sidebar article1 article2 ad"
+        "footer footer footer footer";
+        
+        }
+        .head{
+            grid-area: header;
+            border: 2px solid black;
+        }
+        .hero{
+            grid-area: hero;
+            border: 2px solid black;
+        }
+        .nav{
+          
+           grid-area: nav;
+           border: 2px solid black;
+        }
+        .article1{
+            grid-area: article1;
+            
+            border: 2px solid black;
+           
+        }
+        .article2{
+            grid-area: article2;
+        
+            border: 2px solid black;
+            
+        }
+        .ad{
+            grid-area: ad;
+          
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            
+
+        }
+        .foot{
+            grid-area: footer;
+            
+            border: 2px solid black;
+        }
+        .sidebar{
+            grid-area: sidebar;
+           border: 2px solid black;
+           
+        }
+        @media screen and (width<900px) {
+        .container{
+            grid-template-columns:repeat(2,2fr);
+             grid-template-areas:"header header"
+             "nav nav"
+             "hero hero"
+             "sidebar article1"
+             "article2 ad"
+             "footer footer";
+        }
+        }
+          @media screen and (width<600px) {
+        .container{
+            grid-template-columns:repeat(1,4fr);
+             grid-template-areas:"header"
+             "nav"
+             "hero"
+             "sidebar"
+             "article1"
+             "article2"
+             "ad"
+             "footer";
+        }
+        }
+     
+      
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="head">
+          <h1>VOGUE</h1>
+        </div>
+        <div class="hero">
+          <h2>Overcome your fears and embrace equality</h2>
+        </div>
+        <div class="nav">
+          <nav>
+            <a href="https://www.w3schools.com/css/">Dive More</a>
+            <a href="https://www.w3schools.com/css/">About</a>
+          </nav>
+        </div>
+        <div class="sidebar">
+            <h3>Sidebar</h3>
+          <a href="https://www.w3schools.com/css/">article 1</a>
+          <br>
+          <a href="https://www.w3schools.com/css/">article 2</a>
+          <br>
+          <a href="https://www.w3schools.com/css/">article 3</a>
+        </div>
+        <div class="article1">
+          <article>
+            <h3>Software Implementation-StreamlineX:</h3>
+            <p>
+              Led the
+          successful implementation of the StreamlineX software solution,
+          overseeing a team of 10 developers, coordinating activities, and
+          ensuring timely delivery.Met all project deadlines with 100% on-time
+          delivery, effectively managing project milestones and dependencies.
+          
+            </p>
+          </article>
+        </div>
+        <div class="article2">
+          <article>
+            <h3>Culinary Lifestyle Blog:</h3>
+            <p>
+               Successfully maintained and
+          curated a culinary lifestyle blog, "Gourmet Delights," for four years,
+          focusing on exploring unique flavors, recipes, and culinary
+          experiences. Increased website traffic year over year, achieving a
+          remarkable 200x growth in monthly page views and engagement YoY
+          through effective content creation and promotion strategies.
+         
+            </p>
+          </article>
+        </div>
+        <div class="ad">
+         
+         <img src="images.jpeg" alt="ad" height="200px" width="200px">
+        </div>
+        <div class="foot">
+          <footer>
+            <span>Copyright © 2026-2028 TermsFeed®. All rights reserved. </span>
+          </footer>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
