@@ -1,0 +1,26 @@
+:root{
+    --color-primary:pink;
+    --color-primary-hex:#FFBECA;
+    --color-primary-rgb:rgb(255,192,203);
+     --color-primary-hsl:hsl(350, 100%, 88%);
+     --color-primary-oklch:oklch(86.773% 0.07354 7.009);
+     --color-secondary:#20a7be;
+    --color-accent:#cfdb28;
+    --color-success:#21e051;
+    --color-warning:#e93f0b;
+    --color-error:#8caadb;
+    --color-text:#0549c7;
+    --color-bg:#93c5c9;
+    --color-pink-100:oklch(94.8% 0.028 342.258);
+    --color-pink-200:oklch(90.3% 0.076 319.62);
+    --color-pink-300:oklch(82.3% 0.12 346.018);
+    --color-pink-400:oklch(71.8% 0.202 349.761);
+    --color-pink-500:oklch(65.6% 0.241 354.308);
+}
+:root[data-theme="dark"] {
+  --color-bg:black;
+  --color-text:white;}
+*{
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
