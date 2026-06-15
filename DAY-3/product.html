@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product-Grid</title>
+    <style>
+      .card1 {
+        border: 2px solid black;
+      }
+      .card2 {
+        border: 2px solid black;
+      }
+      .card3 {
+        border: 2px solid black;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+      }
+      .container1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        border: 2px solid black;
+      }
+      .container2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        border: 2px solid black;
+      }
+      .container1 div {
+        border: 2px dotted black;
+      }
+      .container2 div {
+        border: 2px dotted black;
+      }
+      .container3 {
+        display: grid;
+        border: 2px solid black;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .border1 {
+        display: grid;
+        grid-column: span 2;
+        grid-row: span 2;
+        border: 2px solid black;
+      }
+      .border3{
+        grid-column: auto / -1;
+         border: 2px solid black;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="card1">
+          <img src="https://picsum.photos/id/71/200/300" alt="product 1" />
+        </div>
+        <div class="card2">
+          <img src="https://picsum.photos/id/96/200/300" alt="product 2" />
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/146/200/300" alt="product 3" />
+        </div>
+        <div class="card1">
+          <img src="https://picsum.photos/id/152/200/300" alt="product 1" />
+        </div>
+        <div class="card2">
+          <img src="https://picsum.photos/id/180/200/300" alt="product 2" />
+        </div>
+        <div class="card3">
+          <img src="https://picsum.photos/id/182/200/300" alt="product 3" />
+        </div>
+      </div>
+      <h3>Auto Fill</h3>
+      <div class="container1">
+        <div class="item1">Item 1</div>
+        <div class="item2">Item 2</div>
+        <div class="item3">Item 3</div>
+        <div class="item4">Item 4</div>
+        <div class="item5">Item 5</div>
+        <div class="item6">Item 6</div>
+        <div class="item7">Item 7</div>
+        <div class="item8">Item 8</div>
+      </div>
+      <h3>Auto Fit</h3>
+      <div class="container2">
+        <div class="item1">Item 1</div>
+        <div class="item2">Item 2</div>
+        <div class="item3">Item 3</div>
+        <div class="item4">Item 4</div>
+        <div class="item5">Item 5</div>
+        <div class="item6">Item 6</div>
+        <div class="item7">Item 7</div>
+        <div class="item8">Item 8</div>
+      </div>
+      <h3>Featured</h3>
+      <div class="container3">
+        <div class="border1">Item11</div>
+        <div class="border2">Item12</div>
+        <div class="border2">Item12</div>
+        <div class="border2">Item12</div>
+        <div class="border3">Item12</div>
+      </div>
+    </main>
+  </body>
+</html>
