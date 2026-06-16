@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+    <style>
+      .parent {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+      }
+      .loader {
+        border: 16px solid grey;
+        border-radius: 50%;
+        height: 120px;
+        width: 120px;
+        border-top: 16px solid rgb(65, 103, 209);
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .skelton {
+        height: 200px;
+        width: 200px;
+
+        animation: skeleton-loading 1s linear infinite alternate;
+      }
+      @keyframes skeleton-loading {
+        0% {
+          background-color: hsl(200, 20%, 80%);
+        }
+        100% {
+          background-color: hsl(200, 20%, 95%);
+        }
+      }
+      .card {
+        height: 200px;
+        width: 200px;
+        border: 2px solid black;
+        animation: card-entry 0.8s linear forwards;
+      }
+      @keyframes card-entry {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+      .bell {
+        margin: 40px;
+        background: url(image.png);
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+      }
+      .bell:hover {
+        animation: shake 1s ease-in-out;
+      }
+      @keyframes shake {
+        0% {
+          transform: rotate(0deg);
+        }
+        10% {
+          transform: rotate(-10deg);
+        }
+        20% {
+          transform: rotate(10deg);
+        }
+        30% {
+          transform: rotate(-15deg);
+        }
+        40% {
+          transform: rotate(15deg);
+        }
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .loader {
+          animation: spin 2s linear infinite;
+        }
+        .skelton {
+          animation: skeleton-loading 1s linear infinite alternate;
+        }
+        .card {
+          animation: card-entry 0.8s linear forwards;
+        }
+        .bell:hover {
+          animation: shake 1s ease-in-out;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="parent">
+        <h2>Spinner Loader</h2>
+        <div class="loader"></div>
+        <h2>Skelton Loader</h2>
+        <div class="skelton"></div>
+        <h2>Card Entry</h2>
+        <div class="card"></div>
+        <h2>Notification Bell</h2>
+        <div class="bell"></div>
+      </div>
+    </main>
+  </body>
+</html>
