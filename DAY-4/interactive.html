@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive</title>
+    <style>
+      .card1 {
+        border: 2px solid black;
+        height: 70px;
+      }
+      #check {
+        display: none;
+      }
+      .inner {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in;
+      }
+      .inner1 {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in;
+      }
+      .inner2 {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in;
+      }
+      #radio1:checked + .inner1 {
+        max-height: 500px;
+      }
+      #radio2:checked + .inner2 {
+        max-height: 500px;
+      }
+
+      #check:checked + .inner {
+        max-height: 500px;
+      }
+      #st1 {
+        max-height: 0;
+      }
+      #st2 {
+        max-height: 0;
+      }
+      #st3 {
+        max-height: 0;
+      }
+      #st4 {
+        max-height: 0;
+      }
+      #st5 {
+        max-height: 0;
+      }
+      .star label::before {
+        content: "\2606";
+      }
+      .star input[type="radio"]:checked ~ label::before {
+        content: "\2606";
+        color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+        <h3>Checkbox input</h3>
+      <div class="card1">
+        <label for="check">Receive Notifications : </label>
+        <input type="checkbox" id="check" class="check1" />
+        <div class="inner">This is the content</div>
+      </div>
+      <h3>Radio input</h3>
+      <div class="card2">
+        <label for="radio1">Tab 1</label>
+        <input type="radio" id="radio1" class="check2" name="radio" />
+        <div class="inner1">This is Tab 1</div>
+        <label for="radio2">Tab 2</label>
+        <input type="radio" id="radio2" class="check3" name="radio" />
+        <div class="inner2">This is Tab 2</div>
+      </div>
+      <h3>star rating</h3>
+      <div class="star">
+        <input type="radio" id="st1" name="star1" value="1" />
+        <label for="st1"></label>
+        <input type="radio" id="st2" name="star1" value="2" />
+        <label for="st2"></label>
+        <input type="radio" id="st3" name="star1" value="3" />
+        <label for="st3"></label>
+        <input type="radio" id="st4" name="star1" value="4" />
+        <label for="st4"></label>
+        <input type="radio" id="st5" name="star1" value="5" />
+        <label for="st5"></label>
+      </div>
+    </main>
+  </body>
+</html>
