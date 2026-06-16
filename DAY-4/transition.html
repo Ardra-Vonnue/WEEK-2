@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transitions</title>
+    <style>
+      .box1 {
+        background-color: aquamarine;
+        height: 80px;
+        width: 80px;
+        transition-duration: 5s;
+        animation-timing-function: linear;
+      }
+      .box1:hover {
+        width: 300px;
+      }
+      .box2 {
+        background-color: aquamarine;
+        height: 80px;
+        width: 80px;
+        transition-duration: 5s;
+        animation-timing-function: ease;
+      }
+      .box2:hover {
+        width: 300px;
+      }
+      .box3 {
+        background-color: aquamarine;
+        height: 80px;
+        width: 80px;
+        transition-duration: 5s;
+        animation-timing-function: ease-in;
+      }
+      .box3:hover {
+        width: 300px;
+      }
+      .box4 {
+        background-color: aquamarine;
+        height: 80px;
+        width: 80px;
+        transition-duration: 5s;
+        animation-timing-function: ease-out;
+      }
+      .box4:hover {
+        width: 300px;
+      }
+      .box5 {
+        background-color: aquamarine;
+        height: 80px;
+        width: 80px;
+        transition-duration: 5s;
+        animation-timing-function: ease-in-out;
+      }
+      .box5:hover {
+        width: 300px;
+      }
+      .box {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+      }
+      .btn1 {
+        background-color: rgb(221, 243, 160);
+        transition-duration: 0.8s;
+      }
+      .btn1:hover {
+        transform: translateY(10px);
+
+        background-color: cornflowerblue;
+        transition: cubic-bezier(0.51, 2.17, 0.39, -0.64);
+      }
+      .card h3 {
+        opacity: 0;
+      }
+      .card p {
+        opacity: 0;
+      }
+      .card button {
+        opacity: 0;
+      }
+      .card {
+        border: 1px solid black;
+        transition-property: all;
+      }
+      .card:hover h3 {
+        opacity: 100;
+        transition-duration: 1s;
+        transition-delay: 10ms;
+      }
+      .card:hover p {
+        opacity: 100;
+        transition-duration: 1s;
+        transition-delay: 50ms;
+      }
+      .card:hover button {
+        opacity: 100;
+        transition-duration: 1s;
+        transition-delay: 100ms;
+      }
+      .btn3 {
+        border-color: blueviolet;
+        background-color: rgb(109, 133, 241);
+
+        transition-property: all;
+        padding: 5px;
+      }
+      .btn3:focus {
+        border-color: brown;
+        border-radius: 10px;
+        background-color: aquamarine;
+        transition-duration: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h2>Five Timing Functions</h2>
+      <div class="box">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+        <div class="box3">Box3</div>
+        <div class="box4">Box4</div>
+        <div class="box5">Box5</div>
+
+        <div class="button">
+          <button class="btn1">Hover Over Me</button>
+        </div>
+        <div class="card">
+          <h3>Title 1</h3>
+          <p>Description</p>
+          <button class="btn2">Click Here</button>
+        </div>
+        <h2>Focus states</h2>
+
+        <div><button class="btn3">Click Me</button></div>
+      </div>
+    </main>
+  </body>
+</html>
