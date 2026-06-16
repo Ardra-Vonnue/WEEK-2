@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <meta name="title" content="Prnewswire" />
+    <meta
+      name="description"
+      content="media services,geographic media directories and successful communication of PrNewswire."
+    />
+    <meta name="keywords" content="storage,media,colloboration,services" />
+    <meta name="author" content="John Doe" />
+    <link rel="canonical" href="https://www.prnewswire.com/news-releases/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="PR Newswire providing multimedia press releases"
+    />
+    <meta
+      property="og:url"
+      content="https://www.prnewswire.com/news-releases/"
+    />
+    <meta property="og:image" content="https://picsum.photos/id/10/1200/630" />
+    <meta
+      property="og:description"
+      content="Main services of PrNewswire including media and communication that increased trust among users"
+    />
+    <meta property="og:site_name" content="Services" />
+    <style>
+      .card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+          "navbar navbar navbar"
+          "header header header"
+          "service1 service2 service3"
+          "call1 call2 .";
+        padding: 30px;
+      }
+      .card1 {
+        grid-area: service1;
+      }
+      .card2 {
+        grid-area: service2;
+      }
+      .card3 {
+        grid-area: service3;
+      }
+      .navbar {
+        grid-area: navbar;
+      }
+      .head2 {
+        grid-area: header;
+      }
+      .rec {
+        background-color: yellow;
+      }
+      table td:nth-child(4),
+      table th:nth-child(4) {
+        background-color: aquamarine;
+      }
+      .call1 {
+        grid-area: call1;
+      }
+      .call2 {
+        grid-area: call2;
+      }
+      @media screen and (width<768px) {
+        .card {
+          grid-template-columns: repeat(2, 2fr);
+          grid-template-areas:
+            "navbar navbar"
+            "header header"
+            "service1 service2"
+            "service3 ."
+            " call1 call2";
+        }
+      }
+      @media screen and (width<480px) {
+        .card {
+          grid-template-columns: repeat(1, 4fr);
+          grid-template-areas:
+            "navbar"
+            "header"
+            "service1"
+            "service2"
+            "service3"
+            "call1"
+            "call2";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <br />
+      <div class="navbar">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="team.html">Team</a>
+          <a href="contact.html">Contact</a>
+          <a href="services.html" aria-current="page">Services</a>
+        </nav>
+      </div>
+      <div class="head2">
+        <h1>Services</h1>
+      </div>
+      <div class="card">
+        <div class="card1">
+          <article>
+            <h2>Media Services</h2>
+            <p>
+              Use the power of multimedia to Boost your campaign results make
+              your story stand out and build deepe connections with your
+              audience by promoting multimedia contents
+            </p>
+            <ul>
+              <li>
+                Online visibility : We increase discoverability by sharing your
+                multimedia-rich story on up to 2600 sites for images
+              </li>
+              <li>
+                Garner Earned Media: Make it easy for influencers to share your
+                brand's story by including valuable assets that provide depth to
+                articles
+              </li>
+              <li>
+                Product site:Our flexible options help you share the content
+                that best tell your brand's story
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div class="card2">
+          <article>
+            <h2>Geograohic media directories</h2>
+            <p>
+              EIN Presswire has created hundreds of geographic media directories
+              publicly available.
+            </p>
+            <ul>
+              <li>
+                directories are publically available and updated online by the
+                newsroom itself
+              </li>
+              <li>
+                Reporting staff investigates stories looking for breaking news.
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div class="card3">
+          <article>
+            <h2>Succesful Communication</h2>
+            <p>
+              Key to successful communication outreach is to have an
+              organization's news reach the places they are searched and found.
+            </p>
+            <ul>
+              <li>
+                Search engines ,syndication on local news publications and a
+                heavy presence on social media provide a wide net to maximize
+                reach
+              </li>
+              <li>
+                PR NewsWire owns and maintains its own proprietary distribution
+                technologies and building new paths forward.
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="call1">
+          <span>Contact for more details</span>
+          <br />
+          <label for="name">Enter your name:</label>
+        </div>
+        <div class="call2">
+          :<a href="tel:8887760942">8887760942</a>
+          <br />
+          <input type="text" id="name" />
+        </div>
+      </div>
+
+      <div class="table1">
+        <table>
+          <caption>
+            Service compariosn table
+          </caption>
+          <thead>
+            <tr>
+              <th></th>
+              <th colspan="3">Services</th>
+            </tr>
+            <tr>
+              <th scope="col">Criteria</th>
+              <th scope="col">Media services</th>
+              <th scope="col">Geographic media directories</th>
+              <th scope="col">Successful communication</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">price</th>
+              <td>$ 15/month</td>
+              <td>free</td>
+              <td>free</td>
+            </tr>
+            <tr>
+              <th scope="row">Storage</th>
+              <td>1 GB</td>
+              <td>10 GB</td>
+              <td>5 GB</td>
+            </tr>
+            <tr>
+              <th scope="row">Repositories</th>
+              <td>Yes</td>
+              <td>Yes</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <th scope="row">Colloboration</th>
+              <td>No</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <th scope="row">Free trial</th>
+              <td>No</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <abbr title="Snapshot History">Snapshot.History</abbr>
+              </th>
+              <td>1 week</td>
+              <td>2 week</td>
+              <td>1 year</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <abbr title="Email support">Email.support</abbr>
+              </th>
+              <td>No</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <abbr title="Priority support">Priority.Support</abbr>
+              </th>
+              <td>Yes</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <abbr title="Web and Android apps">Web.AndroidApps</abbr>
+              </th>
+              <td>Both</td>
+              <td>Web only</td>
+              <td>Both</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br />
+      <br />
+      <footer>
+        <span>Copyright © 2026-2028 TermsFeed®. All rights reserved. </span>
+      </footer>
+    </main>
+  </body>
+</html>
