@@ -18,6 +18,21 @@ nav{
     }
 }
 
+thead{
+    background-color: cornflowerblue;
+    container-type: scroll-state;
+     position: sticky;
+    top: 50px;
+    z-index: 100;
+
+    > .thead {
+    @container scroll-state(stuck:top) {
+    box-shadow: 0 2px 2px rgb(90 104 233);
+    }
+    }
+
+}
+
 .hero{
     display: flex;
     justify-content: center;
@@ -68,4 +83,34 @@ footer{
 .timeline{
     margin-left: 40px;
     row-gap: 10px;
+}
+
+.card3{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 20px;
+    text-align: center;
+}
+
+.card4{
+    transition: transform 300ms ease-in-out;
+    border: 2px solid black;
+    margin: 30px;
+    
+}
+
+.card4:hover {
+        transform: translateY(-15px);
+        box-shadow:
+          0 20px 25px -5px rgb(4 226 41 / 10%),
+          0 10px 10px -5px rgb(163 5 116 / 4%);
+          border: 3px solid var(--color-accent);
+      }
+
+.call3{
+    width: 300px;
+    height: 80px;
+background-color: var(--color-accent);
+margin: 40px;
+text-align: center;
 }
