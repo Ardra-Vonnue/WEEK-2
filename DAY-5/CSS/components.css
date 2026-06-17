@@ -212,3 +212,21 @@ iframe {
 .required:user-invalid {
   border: 5px solid red;
 }
+a:hover{
+    color: rgb(179, 8, 127);
+}
+a:focus-visible{
+    color: aqua;
+}
+input:hover{
+    background-color: aquamarine;
+}
+input:focus-visible{
+    background-color: bisque;
+}
+button:hover{
+background-color: burlywood;
+}
+button:focus-visible{
+    background-color: cadetblue;
+}
