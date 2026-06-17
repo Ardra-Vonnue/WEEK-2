@@ -1,0 +1,23 @@
+@media screen and (width<768px) {
+.value1{
+    grid-template-columns: repeat(2,2fr);
+}    
+}
+
+@media screen and (width<480px) {
+.value1{
+    grid-template-columns: repeat(1,4fr);
+}    
+}
+
+@media screen and (width<768px) {
+.column1{
+    grid-template-columns: repeat(2,2fr);
+}    
+}
+
+@media screen and (width<480px) {
+.column1{
+    grid-template-columns: repeat(1,4fr);
+}    
+}
