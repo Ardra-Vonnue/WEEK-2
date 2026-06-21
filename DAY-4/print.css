@@ -1,0 +1,22 @@
+@media print{
+    nav{
+        display: none !important; 
+    }
+    #sidebar,#button,#ad,#animation{
+        display: none !important;
+    }
+   .accordion {
+    display: block !important;
+   }
+   form{
+     display: block !important;
+   }
+   a[href^="https"]::after
+   {
+    content: ' (' attr(href) ')';
+    color: blue;
+   }
+   h1,h2,h3,h4,h5,h6{
+    page-break-inside: avoid !important;;
+   }
+}
