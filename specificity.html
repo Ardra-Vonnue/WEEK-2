@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Specificity</title>
+    <style>
+      /* specificity (0,0,1) */
+      div {
+        color: darksalmon;
+      }
+      /* specificity (1,0,0,0,0) */
+      main {
+        color: aqua !important ;
+      }
+      /* specificity (0,0,2) */
+      main > div {
+        color: rgb(15, 18, 189);
+      }
+      /* specificity (0,1,0) */
+      main:nth-child(2) {
+        color: chartreuse;
+      }
+
+      /* specificity (0,1,0) */
+      .test1 {
+        color: chocolate;
+      }
+
+      /* specificity (1,0,0) */
+      #test2 {
+        color: blue;
+      }
+      /* specificity (0,0,0) */
+      * {
+        color: green;
+      }
+
+      /* specificity (1,1,0) */
+      #test2.test1 {
+        color: darkslateblue;
+      }
+      /* specificity (0,1,0) */
+      *.test1 {
+        color: darkred;
+      }
+      /* specificity (0,1,1) */
+      main .test1 {
+        color: cadetblue;
+      }
+      /* specificity (1,0,2) */
+      main div.test1 {
+        color: darkorchid;
+      }
+      /* specificity (1,0,0) */
+      * #test2 {
+        color: bisque;
+      }
+      /* specificity (0,1,0) */
+      main:first-child {
+        color: coral;
+      }
+      /* specificity (0,0,2) */
+      main ~ div {
+        color: darkmagenta;
+      }
+    </style>
+  </head>
+  <body>
+  <!-- specificity (1,0,0,0) -->
+    <main id="test2" class="test1" style="color: gold" data-style="card">
+      <div>
+        The font-family property defines list of fonts,from highest priority to
+        lowest.Font selection does not stop at the first font in the list that
+        is on the user's system.Rather ,font selection does one character at a
+        time,so that if an vailable font does not have a glyph for a needed
+        character,the latter fonts are tried.
+      </div>
+    </main>
+  </body>
+</html>
+<!-- color aqua will be given to paragraph since !important rule is used and it has highest priority -->
