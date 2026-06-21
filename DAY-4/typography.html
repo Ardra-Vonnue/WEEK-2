@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Typography</title>
+    <style>
+        h1{
+            font-size: clamp(2.4rem, 5vw + 1rem, 5.6rem);
+        }
+        h2{
+            font-size: clamp(2.2rem, 5vw , 5.4rem);
+        }
+        h3{
+            font-size: clamp(2.2rem, 4vw, 5.2rem);
+        }
+        h4{
+            font-size: clamp(2.0rem, 3vw, 5.0rem);
+        }
+        h5{
+            font-size: clamp(1.8rem, 2vw, 4.8rem);
+        }
+        h6{
+            font-size: clamp(1.6rem, 1vw, 4.6rem);
+        }
+        .clamp1{
+            padding: clamp(1rem, 3vw, 3rem);
+            height: 100px;
+            width: 100px;
+            background-color: rgb(74, 167, 230);
+        }
+        .clamp2{
+            display: flex;
+            padding: 20px;
+            gap: clamp(1rem, 3vw, 3rem);
+            background-color: antiquewhite;
+
+        }
+        .clamp21{
+            background-color: darkcyan;
+            height: 100px;
+            width: 100px;
+        }
+        .text h4{
+            font-size: 1em;
+        }
+        .container{
+            container-name: my-container;
+            container-type: inline-size;
+        }
+        .container1{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        @container my-container (min-width:500px){
+          .container1{
+            flex-direction: row;
+          }  
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <div class="container">
+            <div class="container1">
+            <div class="clamp1">
+            This is Fluid padding
+        </div>
+        <div class="clamp2">
+            <div class="clamp21">Gap spacing</div>
+            <div class="clamp21">Gap spacing</div>
+        </div>
+        </div>
+        </div>
+    </main>
+</body>
+</html>
