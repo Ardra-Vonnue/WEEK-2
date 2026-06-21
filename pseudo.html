@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        /* It is used to select element when you mouse over them */
+        #pseudo1:hover{
+            color: rgb(221, 92, 17);
+
+        }
+        /*It is used to apply focus styles only when the keyboard is use to focus  */
+        #pseudo2:focus-visible{
+            outline: 2px solid rgb(11, 173, 146);
+        }
+        input[type=checkbox]{
+            appearance: none;
+        }
+        
+        input[type=checkbox]::before{
+            display: inline-block;
+            width: 10px;
+            height: 50px;
+            border: 2px solid #09ee2755;
+
+        }
+        [for=check]::before{
+            content: "";
+            display: inline-block;
+            border: 0.2px solid black;
+            width: 10px;
+            height: 10px;
+            color: blueviolet;
+        }
+        input[type=checkbox]:checked + label::before {
+            border: 2px solid blue;
+
+        }
+        body{
+            counter-reset: list;
+        }
+        li::before{
+            counter-increment: list;
+            content: "Item" counter(list) " : ";
+        }
+        .tooltip{
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+        }
+        .tooltiptext{
+            visibility:hidden;
+            color: blueviolet;
+            z-index: 1;
+            position:absolute;
+            width: 150px;
+            text-align: center;
+        }
+        .tooltip:hover .tooltiptext{
+            visibility:visible;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <nav>
+            <a id="pseudo1" href="#card1">Go to para1</a>
+            <br>
+            <a href="#card2">Go to para2</a>
+            <br>
+            <a id="pseudo2" href="#card3">Go to para3</a>
+            <br>
+            <br>
+        </nav>
+        
+            <input type="checkbox" id="check">
+            <label id="label1" for="check">Receive Notifications</label>
+            
+    
+        <div id="counter1">
+            <ul >
+                <li id="card1">Counter-reset</li>
+                <li id="card2">Counter-increment</li>
+                <li id="card3">Counter-set</li>
+            </ul>
+        </div>
+        <div class="tooltip">Hover over me
+            <span class="tooltiptext">This is a tooltip text.</span>
+        </div>
+    </main>
+    
+</body>
+</html>
