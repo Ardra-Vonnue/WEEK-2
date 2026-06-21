@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <style>
+      :root {
+        --color-primary: pink;
+        --color-primary-hex: #ffbeca;
+        --color-primary-rgb: rgb(255, 192, 203);
+        --color-primary-hsl: hsl(350, 100%, 88%);
+        --color-primary-oklch: oklch(86.773% 0.07354 7.009);
+        --color-secondary: #20a7be;
+        --color-accent: #cfdb28;
+        --color-success: #21e051;
+        --color-warning: #e93f0b;
+        --color-error: #8caadb;
+        --color-text: #0549c7;
+        --color-bg: #93c5c9;
+        --color-pink-100: oklch(94.8% 0.028 342.258);
+        --color-pink-200: oklch(90.3% 0.076 319.62);
+        --color-pink-300: oklch(82.3% 0.12 346.018);
+        --color-pink-400: oklch(71.8% 0.202 349.761);
+        --color-pink-500: oklch(65.6% 0.241 354.308);
+      }
+      :root[data-theme="dark"] {
+        --color-bg: black;
+        --color-text: white;
+      }
+      * {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+      }
+      a {
+        text-decoration: none;
+      }
+      .head {
+        display: grid;
+        height: 70px;
+        border: 2px solid black;
+
+        row-gap: 10px;
+        column-gap: 10px;
+      }
+      .sidebar {
+        display: grid;
+        width: 240px;
+        height: 600px;
+        column-gap: 10px;
+        row-gap: 5px;
+        border: 2px solid black;
+      }
+      .card1 {
+        display: grid;
+        grid-template-columns: 150px 150px 150px 150px;
+        display: flex;
+        justify-content: center;
+        align-content: space-between;
+        padding: 10px;
+        width: 600px;
+      }
+      .mid {
+        display: grid;
+        grid-template-areas: "sidebar card1";
+      }
+      .card2 {
+        grid-area: image1;
+      }
+      .card3 {
+        grid-area: image2;
+      }
+      .card4 {
+        grid-area: image3;
+      }
+      .card5 {
+        grid-area: image4;
+      }
+      .card6 {
+        grid-area: image5;
+      }
+      .icon1 {
+        grid-area: icon1;
+      }
+      .icon2 {
+        grid-area: icon2;
+      }
+      .icon3 {
+        grid-area: icon3;
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+      }
+      .panel1 {
+        grid-area: panel1;
+        border: 2px solid black;
+        height: 70px;
+      }
+      .panel2 {
+        grid-area: panel2;
+        border: 2px solid black;
+      }
+      .card1 {
+        display: grid;
+        grid-template-areas:
+          "image1 image2 image3 image4"
+          "image5 image5 image5 image5"
+          "panel1 panel1 panel2 panel2";
+      }
+      .icon {
+        display: inline-block;
+      }
+      @media screen and (width<1024px) {
+        .sidebar {
+          width: 60px;
+          grid-template-areas:
+            "icon1"
+            "icon2"
+            "icon3";
+        }
+        .side1 a {
+          display: none;
+        }
+        .icon {
+          display: block;
+        }
+      }
+      @media screen and (width<768px) {
+        .mid {
+          grid-template-columns: repeat(1, 4fr);
+          grid-template-areas:"card1"
+            "sidebar";
+        }
+         .side1 a {
+          display: inline-block;
+        }
+        .sidebar{
+            width: 100%;
+
+        }
+        .card1 {
+          grid-template-areas:
+            "image1"
+            "image2"
+            " image3"
+            "image4"
+            "image5"
+            "panel1"
+            "panel2";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="head">
+        <header>Admin</header>
+        <nav>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/">Home</a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/">Logout</a>
+        </nav>
+      </div>
+      <div class="mid">
+        <div class="sidebar">
+          <div class="side1">
+            <div class="icon icon1">
+              <img
+                src="https://img.icons8.com/?size=100&id=hUnyrtKvZdQU&format=png&color=000000"
+                alt="random2"
+                width="10px"
+                height="10px"
+              />
+            </div>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/"
+              >Notifications</a
+            >
+          </div>
+          <div class="side1">
+            <div class="icon icon2">
+              <img
+                src="https://img.icons8.com/?size=100&id=QTU7025DJRNb&format=png&color=000000"
+                alt="random3"
+                width="10px"
+                height="10px"
+              />
+            </div>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/"
+              >Orders</a
+            >
+          </div>
+          <div class="side1">
+            <div class="icon icon3">
+              <img
+                src="https://img.icons8.com/?size=100&id=zF5K8bdbeBDH&format=png&color=000000"
+                alt="random4"
+                width="10px"
+                height="10px"
+              />
+            </div>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/"
+              >History</a
+            >
+          </div>
+        </div>
+        <div class="card1">
+          <div class="card2">
+            <img
+              src="one.png"
+              alt="random image 1"
+              height="150px"
+              width="150px"
+            />
+          </div>
+          <div class="card3">
+            <img
+              src="two.png"
+              alt="random image 2"
+              height="150px"
+              width="150px"
+            />
+          </div>
+          <div class="card4">
+            <img
+              src="three.jpeg"
+              alt="random image 3"
+              height="150px"
+              width="150px"
+            />
+          </div>
+          <div class="card5">
+            <img
+              src="four.png"
+              alt="random image 3"
+              height="150px"
+              width="150px"
+            />
+          </div>
+
+          <div class="card6">
+            <img
+              src="five.png"
+              alt="random image"
+              height="300px"
+              width="700px"
+            />
+          </div>
+
+          <div class="panel1">smaller panel</div>
+          <div class="panel2">smaller panel</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
