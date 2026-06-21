@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox</title>
+    <style>
+      .container {
+        display: flex;
+        border: 1px solid black;
+        width: 400px;
+        height: 400px;
+      }
+      .container1 {
+        width: 400px;
+        height: 400px;
+        display: flex;
+        justify-content: flex-start;
+        border: 2px solid black;
+
+        font-size: 15px;
+      }
+      .container2 {
+        width: 400px;
+        height: 400px;
+        display: flex;
+        justify-content: flex-end;
+        border: 2px solid black;
+
+        font-size: 18px;
+      }
+      .container3 {
+        width: 400px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        border: 2px solid black;
+
+        font-size: 24px;
+      }
+      .container4 {
+        width: 400px;
+        height: 400px;
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid black;
+
+        font-size: 26px;
+      }
+      .container5 {
+        width: 400px;
+        height: 400px;
+        display: flex;
+        justify-content: space-around;
+        border: 2px solid black;
+
+        font-size: 28px;
+      }
+      .container6 {
+        width: 400px;
+        height: 400px;
+        display: flex;
+        justify-content: space-evenly;
+        border: 2px solid black;
+      }
+      .box {
+        border: 2px solid black;
+      }
+      .box1 {
+        width: 30px;
+        border: 2px solid black;
+      }
+      .container7 {
+        flex-wrap: wrap;
+        align-content: flex-start;
+      }
+      .container8 {
+        flex-wrap: wrap;
+        align-content: flex-end;
+      }
+      .container9 {
+        flex-wrap: wrap;
+        align-content: center;
+      }
+      .container10 {
+        flex-wrap: wrap;
+        align-content: space-between;
+      }
+      .container11 {
+        flex-wrap: wrap;
+        align-content: space-around;
+      }
+      .container12 {
+        flex-wrap: wrap;
+        align-content: stretch;
+      }
+      .container13 {
+        flex-direction: row;
+      }
+      .container14 {
+        flex-direction: row-reverse;
+      }
+      .container15 {
+        flex-direction: column;
+      }
+      .container16 {
+        flex-direction: column-reverse;
+      }
+      .container17 {
+        display: flex;
+        align-items: flex-start;
+      }
+      .container18 {
+        display: flex;
+        align-items: flex-end;
+      }
+      .container19 {
+        display: flex;
+        align-items: center;
+      }
+      .container20 {
+        display: flex;
+        align-items: baseline;
+      }
+      .container21 {
+        align-items: stretch;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Justify-Content</h1>
+      <div class="container container1">
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+      </div>
+      <div class="container container2">
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+      </div>
+      <div class="container container3">
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+      </div>
+      <div class="container container4">
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+      </div>
+      <div class="container container5">
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+      </div>
+      <div class="container container6">
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+      </div>
+      <h1>Align-content</h1>
+      <div class="container container7">
+        <div class="box1">a</div>
+        <div class="box1">b</div>
+        <div class="box1">c</div>
+        <div class="box1">d</div>
+        <div class="box1">e</div>
+        <div class="box1">f</div>
+        <div class="box1">g</div>
+        <div class="box1">h</div>
+        <div class="box1">i</div>
+        <div class="box1">j</div>
+        <div class="box1">k</div>
+        <div class="box1">l</div>
+        <div class="box1">m</div>
+        <div class="box1">n</div>
+        <div class="box1">o</div>
+        <div class="box1">p</div>
+      </div>
+      <div class="container container8">
+        <div class="box1">a</div>
+        <div class="box1">b</div>
+        <div class="box1">c</div>
+        <div class="box1">d</div>
+        <div class="box1">e</div>
+        <div class="box1">f</div>
+        <div class="box1">g</div>
+        <div class="box1">h</div>
+        <div class="box1">i</div>
+        <div class="box1">j</div>
+        <div class="box1">k</div>
+        <div class="box1">l</div>
+        <div class="box1">m</div>
+        <div class="box1">n</div>
+        <div class="box1">o</div>
+        <div class="box1">p</div>
+      </div>
+      <div class="container container9">
+        <div class="box1">a</div>
+        <div class="box1">b</div>
+        <div class="box1">c</div>
+        <div class="box1">d</div>
+        <div class="box1">e</div>
+        <div class="box1">f</div>
+        <div class="box1">g</div>
+        <div class="box1">h</div>
+        <div class="box1">i</div>
+        <div class="box1">j</div>
+        <div class="box1">k</div>
+        <div class="box1">l</div>
+        <div class="box1">m</div>
+        <div class="box1">n</div>
+        <div class="box1">o</div>
+        <div class="box1">p</div>
+      </div>
+      <div class="container container10">
+        <div class="box1">a</div>
+        <div class="box1">b</div>
+        <div class="box1">c</div>
+        <div class="box1">d</div>
+        <div class="box1">e</div>
+        <div class="box1">f</div>
+        <div class="box1">g</div>
+        <div class="box1">h</div>
+        <div class="box1">i</div>
+        <div class="box1">j</div>
+        <div class="box1">k</div>
+        <div class="box1">l</div>
+        <div class="box1">m</div>
+        <div class="box1">n</div>
+        <div class="box1">o</div>
+        <div class="box1">p</div>
+      </div>
+      <div class="container container11">
+        <div class="box1">a</div>
+        <div class="box1">b</div>
+        <div class="box1">c</div>
+        <div class="box1">d</div>
+        <div class="box1">e</div>
+        <div class="box1">f</div>
+        <div class="box1">g</div>
+        <div class="box1">h</div>
+        <div class="box1">i</div>
+        <div class="box1">j</div>
+        <div class="box1">k</div>
+        <div class="box1">l</div>
+        <div class="box1">m</div>
+        <div class="box1">n</div>
+        <div class="box1">o</div>
+        <div class="box1">p</div>
+      </div>
+      <div class="container container12">
+        <div class="box1">a</div>
+        <div class="box1">b</div>
+        <div class="box1">c</div>
+        <div class="box1">d</div>
+        <div class="box1">e</div>
+        <div class="box1">f</div>
+        <div class="box1">g</div>
+        <div class="box1">h</div>
+        <div class="box1">i</div>
+        <div class="box1">j</div>
+        <div class="box1">k</div>
+        <div class="box1">l</div>
+        <div class="box1">m</div>
+        <div class="box1">n</div>
+        <div class="box1">o</div>
+        <div class="box1">p</div>
+      </div>
+      <h1>flex-direction</h1>
+      <div class="container container13">
+        <div class="box1">a</div>
+        <div class="box1">b</div>
+        <div class="box1">c</div>
+        <div class="box1">d</div>
+      </div>
+      <div class="container container14">
+        <div class="box1">a</div>
+        <div class="box1">b</div>
+        <div class="box1">c</div>
+        <div class="box1">d</div>
+      </div>
+      <div class="container container15">
+        <div class="box1">a</div>
+        <div class="box1">b</div>
+        <div class="box1">c</div>
+        <div class="box1">d</div>
+      </div>
+      <div class="container container16">
+        <div class="box1">a</div>
+        <div class="box1">b</div>
+        <div class="box1">c</div>
+        <div class="box1">d</div>
+      </div>
+      <h1>Align Items</h1>
+      <div class="container container17">
+        <div class="box1">a</div>
+        <div class="box1">b</div>
+        <div class="box1">c</div>
+        <div class="box1">d</div>
+      </div>
+      <div class="container container18">
+        <div class="box1">a</div>
+        <div class="box1">b</div>
+        <div class="box1">c</div>
+        <div class="box1">d</div>
+      </div>
+      <div class="container container19">
+        <div class="box1">a</div>
+        <div class="box1">b</div>
+        <div class="box1">c</div>
+        <div class="box1">d</div>
+      </div>
+      <div class="container container20">
+        <div class="box1" style="font-size: 20px">a</div>
+        <div class="box1" style="font-size: 50px">b</div>
+        <div class="box1" style="font-size: 30px">c</div>
+        <div class="box1" style="font-size: 25px">d</div>
+      </div>
+      <div class="container container21">
+        <div class="box1">a</div>
+        <div class="box1">b</div>
+        <div class="box1">c</div>
+        <div class="box1">d</div>
+      </div>
+    </main>
+  </body>
+</html>
