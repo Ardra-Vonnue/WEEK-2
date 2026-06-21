@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holly-Grail</title>
+    <style>
+        .parent{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+      .row {
+        display: flex;
+        flex-grow: 2;
+       
+      }
+      .column-left {
+        display: flex;
+        width: 50px;
+        flex: 0 0 150px;
+
+        align-items: center;
+        background-color: aquamarine;
+        justify-content: center;
+      }
+      .column-center {
+        display: flex;
+        
+        flex-grow: 2;
+        justify-content: center;
+        align-items: center;
+        background-color: darkgrey;
+      }
+      .column-right {
+        display: flex;
+        width: 50px;
+        flex: 0 0 150px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(98, 187, 98);
+      }
+      .head {
+        display: flex;
+        border: 2px solid black;
+        justify-content: center;
+        height: 100px;
+       align-items: center;
+        background-color: rgb(46, 159, 224);
+      }
+     
+      .foot {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(206, 219, 159);
+        height: 20px;
+      }
+       @media screen and (width<600px) {
+        .row{
+            flex-direction: column;
+        }
+        .column-center{
+            order: 1;
+            
+        }
+        .column-left{
+            order: 2;
+            
+        }
+        .column-right{
+            order: 3;
+            
+        }
+       }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="head">
+        <header>This is header</header>
+      </div>
+      <div class="row">
+        <div class="column-left">
+          <p>
+            <a href="#card1">News Releases</a>
+            <br />
+            <br />
+            <a href="#card2">Trending topics</a>
+            <br />
+            <br />
+            <a href="#card3">Science and Tech</a>
+          </p>
+        </div>
+
+        <div class="column-center">
+          <main>
+            <p>This is the main content</p>
+          </main>
+        </div>
+        <div class="column-right">
+          <aside>This is the aside content</aside>
+        </div>
+      </div>
+      <div class="foot">
+        <footer>
+          <span>Copyright © 2026-2028 TermsFeed®. All rights reserved.</span>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
